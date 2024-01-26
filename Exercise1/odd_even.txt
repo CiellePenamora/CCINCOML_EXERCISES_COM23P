@@ -1,0 +1,10 @@
+num initially gives the user input
+
+IF num is modulo by 2 equals to 0 THEN
+
+PRINT user input “is even”
+
+
+ELSE
+
+PRINT user input “is odd”

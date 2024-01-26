@@ -1,0 +1,23 @@
+START
+         RECEIVE initial cards for player and dealer
+         CHECK for blackjack (Ace and a 10-valued card) for both player and dealer
+          IF player or dealer has blackjack THEN
+                       DECLARE winner based on blackjack rules
+          ELSE
+              Player's turn
+                       WHILE player has not busted and chooses not to stand DO
+               IF player's hand total <= 11 THEN
+                        HIT (take another card)
+          ELSE IF player's hand total >= 21 THEN
+               STAND (take no more cards)
+            ENDIF
+               IF player's hand is a soft hand (contains an Ace counted as 11) THEN
+                             ADJUST strategy for soft hand
+              ENDIF
+              CONSIDER splitting pairs
+              CONSIDER doubling down
+         ENDIF
+            END WHILE
+COMPARE player's and dealer's hand totals
+DECLARE winner based on who is closer to 21 without going over
+END
